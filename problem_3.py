@@ -1,3 +1,4 @@
+#To run use "streamlit run problem_3.py" in terminal in the directory the file is in and change the working directory if needed
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -9,7 +10,7 @@ st.set_page_config(layout="wide")
 countries = ['abw', 'usa', 'chn', 'ind', 'bra', 'can', 'mex', 'deu', 'fra', 'jpn']
 
 #Data directory path
-data_dir = '/Users/hteshome/Desktop/Training/Pytools_Class/07-visualization-haile-teshome/ddf--datapoints--population--by--country--age--gender--year'
+data_dir = os.path.join(os.getcwd(), 'ddf--datapoints--population--by--country--age--gender--year')
 
 #Function to load data for selected countries
 @st.cache_data
